@@ -1,11 +1,20 @@
-﻿using System;
+using Smartwyre.DeveloperTest.Services;
 
-namespace Smartwyre.DeveloperTest.Runner;
+var builder = WebApplication.CreateBuilder(args);
 
-class Program
+builder.Services.AddScoped<IRebateService, RebateService>();
+builder.Services.AddControllers();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Enable Swagger UI only in the development enviroment
+if (app.Environment.IsDevelopment())
 {
-    static void Main(string[] args)
-    {
-        throw new NotImplementedException();
-    }
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+app.MapControllers();
+
+app.Run();
