@@ -1,10 +1,10 @@
-﻿namespace Smartwyre.DeveloperTest.Types;
+using System;
+
+namespace Smartwyre.DeveloperTest.Types;
 
 public class CalculateRebateRequest
 {
-    public string RebateIdentifier { get; set; }
-
-    public string ProductIdentifier { get; set; }
-
+    public Guid RebateIdentifier { get; set; }
+    public Guid ProductIdentifier { get; set; }
     public decimal Volume { get; set; }
 }

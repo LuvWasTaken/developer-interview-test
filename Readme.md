@@ -44,3 +44,32 @@ You are free to use any frameworks/NuGet packages that you see fit. You should p
 Feel free to use code comments to describe your changes. You are also welcome to update this readme with any important details for us to consider.
 
 Once you have completed the exercise either ensure your repository is available publicly or contact the hiring manager to set up a private share.
+
+# Changes
+
+The runner project has been converted to a Web API. It uses Faker to generate mock data and swagger for manual testing. I used patterns and practices from projects I have previously worked on. 
+
+
+# Run the Project
+
+Run these commands from the repository folder. Use the sample product and rebate IDs provided in the console logs for testing.
+
+Build the solution:
+
+```sh
+dotnet build
+```
+
+Start the app:
+
+```sh
+dotnet run --project Smartwyre.DeveloperTest.Runner
+```
+
+Open [Swagger UI](http://localhost:5000/swagger) to try the endpoints. Press Ctrl+C to stop the app.
+
+Run the tests:
+
+```sh
+dotnet test Smartwyre.DeveloperTest.Tests
+```

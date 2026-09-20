@@ -18,4 +18,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Smartwyre.DeveloperTest\Smartwyre.DeveloperTest.csproj" />
+    <ProjectReference Include="..\Smartwyre.DeveloperTest.Runner\Smartwyre.DeveloperTest.Runner.csproj" />
+  </ItemGroup>
+
 </Project>
